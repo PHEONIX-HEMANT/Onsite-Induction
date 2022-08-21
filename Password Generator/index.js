@@ -21,16 +21,12 @@ const getKey = [
   }
 ];
 
-let upper = document.getElementById('upperCase').checked;
-let lower = document.getElementById('lowerCase').checked;
-let number = document.getElementById('number').checked;
-let symbol = document.getElementById('symbol').checked;
 
 function createPassword() {
-  const upper = document.getElementById("upperCase").checked;
-  const lower = document.getElementById("lowerCase").checked;
-  const number = document.getElementById("number").checked;
-  const symbol = document.getElementById("symbol").checked;
+  const upper = document.getElementById("upperCase");
+  const lower = document.getElementById("lowerCase");
+  const number = document.getElementById("number");
+  const symbol = document.getElementById("symbol");
   if (upper + lower + number + symbol === 0) {
     alert("Please check atleast one box!");
     return;
