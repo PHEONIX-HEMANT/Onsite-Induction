@@ -1,7 +1,4 @@
-// let upper = document.getElementById('upperCase');
-// let lower = document.getElementById('lowerCase');
-// let number = document.getElementById('numbers');
-// let symbol = document.getElementById('symbols');
+
 
 let generateBtn = document.getElementById('generatebtn');
 
