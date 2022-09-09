@@ -1,11 +1,18 @@
-let generateBtn = document.getElementById('generatebtn')
+// let upper = document.getElementById('upperCase');
+// let lower = document.getElementById('lowerCase');
+// let number = document.getElementById('numbers');
+// let symbol = document.getElementById('symbols');
+
+let generateBtn = document.getElementById('generatebtn');
 
 const keys ={
-    upperCase : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    lowerCase : "abcdefghijklmnopqrstuvwxyz",
-    numbers : "0123456789",
-    symbols: "!@#$%^&*"
+    upperCase : ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+    lowerCase : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
+    numbers : ["0","1","2","3","4","5","6","7","8","9"],
+    symbols: ["!","@","#","$","%","^","&","*"]
 }
+
+
 const getKey = [
   function upperCase() {
     return keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)];
@@ -23,25 +30,24 @@ const getKey = [
 
 
 function createPassword() {
-  const upper = document.getElementById("upperCase");
-  const lower = document.getElementById("lowerCase");
-  const number = document.getElementById("number");
-  const symbol = document.getElementById("symbol");
-  if (upper + lower + number + symbol === 0) {
-    alert("Please check atleast one box!");
-    return;
+
+  const passwordBox = document.getElementById("password");
+  const length = document.getElementById("length").value;
+  console.log(length);
+  
+  if (length == false) {
+    alert("Enter Length");
   }
-  const passwordBox = document.getElementById("passwordBox");
-  const length = document.getElementById("length");
   let password = "";
-  while (length.value > password.length) {
+  while (length > password.length) {
     let keyToAdd = getKey[Math.floor(Math.random() * getKey.length)];
-    let isChecked = document.getElementById(keyToAdd.name).checked;
+    let isChecked = document.getElementById(keyToAdd.name);
     if (isChecked) {
       password += keyToAdd();
     }
   }
-  passwordBox.innerHTML = password;
+  console.log(password);
+  passwordBox.innerText = password;
 }
 
-generateBtn.addEventListener('click',createPassword());
+generateBtn.addEventListener('click',createPassword);
