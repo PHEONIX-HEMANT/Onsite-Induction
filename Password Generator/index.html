@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3>RANDOM PASSEORD GENERATOR</h3>
+    <h3 id="Logo">RANDOM PASSEORD GENERATOR</h3>
     <div class="controls">
         <div id="passwordBox">
-            <input type="text">
+            <p>Your Password is :</p><br>
+            <p id="password"></p>
         </div>
         
         <div>
             <label for="length">length</label>
-            <input type="checkbox" id="length" checked>
+            <input type="text" id="length">
         </div>
         <div>
-        <label for="number">Include Number</label>
-        <input type="checkbox" id="number" checked>
+            <label for="numbers">Include Number</label>
+            <input type="checkbox" id="numbers" checked>
         </div>
 
         <div>
@@ -33,8 +35,8 @@
         </div>
 
         <div>
-            <label for="symbol">Include symbol</label>
-            <input type="checkbox" id="symbol" checked>
+            <label for="symbols">Include symbol</label>
+            <input type="checkbox" id="symbols" checked>
         </div>
         <div class="button">
             <button id="generatebtn">Generate Password</button>
