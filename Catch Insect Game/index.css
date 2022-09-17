@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(127, 255, 212);
+}
+
+.ScoreBoard{
+    display: flex;
+    font-family: 'Combo', cursive;
+    font-size: larger;
+    padding: 5px 0px;
+}
+
+.ScoreBoard #time{
+    padding: 0px 30vw;
+}
+
+img{
+    height: 7vh;
+    
+}
+.insect_btn{
+    cursor: pointer;
+    border: none;
+    background: inherit;
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+}
+.popup{
+    display: flex;
+    justify-content: center;
+    font-family: 'Combo', cursive;
+    font-size: 40px;
+    font-weight: bolder;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 150px;
+    padding: 40px 0px;
+    background-color: rgb(138, 43, 226);
+    visibility: hidden;
+}
+
+
+footer{
+    text-align: center;
+    margin: 500px 20px 0px 0px;
+}
+
